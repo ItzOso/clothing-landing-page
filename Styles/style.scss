@@ -1,0 +1,126 @@
+@import "./reset";
+@import "./nav";
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap");
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  overflow-x: hidden;
+  background: black;
+}
+
+button {
+  padding: 1.5em 2em;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  transition: all 200ms;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+#main {
+  background: url("../Images/skater-bg.jpeg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 60px);
+  #main-left {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+    margin-left: 75px;
+    background: white;
+    padding: 1.8rem;
+    border-radius: 15px;
+    p {
+      font-size: 3rem;
+      width: 450px;
+    }
+    button {
+      margin-top: 25px;
+    }
+  }
+}
+
+#examples {
+  background: black;
+  min-height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+  .ex-display {
+    transition: all 200ms;
+    transform: scale(0.9);
+    &:hover,
+    &:focus {
+      transform: scale(1);
+    }
+    img {
+      width: 500px;
+      transition: all 200ms;
+      &:hover,
+      &:focus {
+        transform: rotate(15deg);
+      }
+    }
+    p {
+      color: white;
+      margin-top: -35px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      margin-left: 22%;
+      margin-top: -66%;
+      padding: 55% 55% 0 0;
+      border-radius: 50%;
+      background: lightblue;
+      z-index: -1;
+    }
+  }
+}
+
+#contact-section {
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../Images/skating2-bg.jpeg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+footer {
+  height: 250px;
+  background: black;
+  color: white;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  line-height: 1.5;
+  div {
+    span {
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #main {
+    justify-content: center;
+    #main-left {
+        margin: 0;
+        width: 80%;
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
